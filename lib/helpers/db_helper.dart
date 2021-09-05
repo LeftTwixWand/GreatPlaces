@@ -5,7 +5,7 @@ class DBHelper {
   static Future<void> insert(String table, Map<String, Object> data) async {
     final dbPath = await sql.getDatabasesPath();
     final database = await sql.openDatabase(path.join(dbPath, 'places.db'),
-        onCreate: _onDatabaseCreating);
+        onCreate: _onDatabaseCreating, version: 1);
 
     database.insert(table, data,
         conflictAlgorithm: sql.ConflictAlgorithm.replace);
