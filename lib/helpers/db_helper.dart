@@ -13,7 +13,7 @@ class DBHelper {
 
   static Future<void> _onDatabaseCreating(sql.Database db, int version) {
     return db.execute(
-      'CREATE TABLE user_places(id TEXT PRIMARY KEY, title TEXT, image TEXT)',
+      'CREATE TABLE places(id TEXT PRIMARY KEY, title TEXT, image TEXT)',
     );
   }
 }
