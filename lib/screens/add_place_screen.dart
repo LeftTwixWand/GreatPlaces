@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../providers/places_provider.dart';
 import '../widgets/image_input.dart';
+import '../widgets/location_input.dart';
 
 class AddPlaceScreen extends StatefulWidget {
   static const routeName = '/add-place';
@@ -52,6 +53,10 @@ class _AddPlaceScreenState extends State<AddPlaceScreen> {
                         height: 10,
                       ),
                       ImageInput(_selectImage),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      LocationInput(),
                     ],
                   ),
                 ),
@@ -65,7 +70,7 @@ class _AddPlaceScreenState extends State<AddPlaceScreen> {
                 elevation: MaterialStateProperty.all(0),
                 tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                 backgroundColor: MaterialStateProperty.resolveWith(
-                    (states) => Theme.of(context).accentColor),
+                    (states) => Theme.of(context).colorScheme.secondary),
               ),
             ),
           ],

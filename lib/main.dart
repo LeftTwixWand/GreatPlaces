@@ -25,7 +25,8 @@ class MyApp extends StatelessWidget {
           // Notice that the counter didn't reset back to zero; the application
           // is not restarted.
           primarySwatch: Colors.indigo,
-          accentColor: Colors.amber,
+          colorScheme:
+              ColorScheme.fromSwatch().copyWith(secondary: Colors.amber),
         ),
         home: PlacesListScreen(),
         routes: {
